@@ -1,12 +1,11 @@
 "use client";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import kp from "@/app/assets/me.jpeg";
 import React from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { basepath, cn } from "@/lib/utils";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import NextImage from "@/components/ui/NextImage";
 
 const HomePage = () => {
 	const openMailTo = () => {
@@ -23,9 +22,9 @@ const HomePage = () => {
 				}}
 			>
 				<div className="rounded-full w-[10rem] h-[10rem] mx-auto shadow-lg transition-transform duration-500 hover:scale-105 hover:rotate-3 hover:shadow-2xl rounded-full overflow-hidden">
-					<Image
-						src={kp}
-						alt="Krishna Prasad - Full stack developer"
+					<NextImage
+						src={basepath + "/assets/me.jpeg"}
+            alt="Krishna Prasad - Full stack developer"
 						className="w-full h-full object-cover"
 					/>
 				</div>

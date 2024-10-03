@@ -1,14 +1,15 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { basepath, cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import NextImage from "./NextImage";
 
-const ReactLogo = "https://www.svgrepo.com/show/374032/reactjs.svg";
-const NextLogo = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png";
-const GolangLogo = "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_White.svg";
-const MySQLLogo = "https://www.svgrepo.com/show/439233/mysql.svg";
-const PostgreSQLLogo = "https://www.svgrepo.com/show/354200/postgresql.svg";
+const ReactLogo = basepath + "/assets/logos/react.svg";
+const NextLogo = basepath + "/assets/logos/next.svg";
+const GolangLogo = basepath + "/assets/logos/golang.svg";
+const MySQLLogo = basepath + "/assets/logos/mysql.svg";
+const PostgreSQLLogo = basepath + "/assets/logos/postgresql.svg";
 
 const logos = [ReactLogo, NextLogo, GolangLogo, MySQLLogo, PostgreSQLLogo];
 
@@ -29,25 +30,27 @@ export const InfiniteMovingCards = ({
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    addAnimation();
-  }, [addAnimation]);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
+    function addAnimation() {
+      if (containerRef.current && scrollerRef.current) {
+        const scrollerContent = Array.from(scrollerRef.current.children);
+  
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          if (scrollerRef.current) {
+            scrollerRef.current.appendChild(duplicatedItem);
+          }
+        });
+  
+        getDirection();
+        getSpeed();
+        setStart(true);
+      }
     }
-  }
+
+    addAnimation();
+  }, []);
+  const [start, setStart] = useState(false);
+  
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -100,29 +103,14 @@ export const InfiniteMovingCards = ({
             key={item}
           >
             <blockquote>
-              <Image
+              <NextImage
                 key={idx}
                 src={item}
                 alt={`Logo ${idx}`}
-                className="h-10"
+                width={10}
+                height={10}
+                className="h-10 w-10"
               />
-              {/* <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
-              </div> */}
             </blockquote>
           </li>
         ))}

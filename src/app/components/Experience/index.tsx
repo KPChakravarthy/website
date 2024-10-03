@@ -1,15 +1,17 @@
 'use client'
 import React from "react";
-import img1 from "@/app/assets/experiences/img1.jpg";
-import img2 from "@/app/assets/experiences/img2.jpg";
 import CardParallax from "@/components/ui/card-parallax";
 import { useScroll } from "framer-motion";
+import { basepath } from "@/lib/utils";
 
 export const experienceColors = {
   ubyon: "53, 174, 83",
   cognitiveClouds: "33, 136, 158",
   imaxBluet: "255, 255, 4",
 }
+
+const img1 = basepath + "/assets/experiences/img1.jpg";
+const img2 = basepath + "/assets/experiences/img2.jpg";
 
 export const projects = [
   {
@@ -24,7 +26,7 @@ export const projects = [
     slug: "ubyon-inc",
     images: [img1, img2],
     color: experienceColors.ubyon,
-    link: 'experience/ubyon',
+    link: '/experience/ubyon',
   },
   {
     title: "Cognitive Clouds",
@@ -38,7 +40,7 @@ export const projects = [
     slug: "cognitive-clouds",
     images: [img1, img2],
     color: experienceColors.cognitiveClouds,
-    link: 'experience/cognitive-clouds',
+    link: '/experience/cognitive-clouds',
   },
   {
     title: "IMAX CW & Bluet",

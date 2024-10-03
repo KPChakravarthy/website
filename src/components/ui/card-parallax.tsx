@@ -1,9 +1,9 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
 import Link from 'next/link';
 import { useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import CTAButton from "./button";
+import NextImage from "./NextImage";
 
 interface CardProps {
   i: number;
@@ -13,7 +13,7 @@ interface CardProps {
   description: React.ReactNode;
   color: string;
   slug: string;
-  images: StaticImageData[];
+  images: string[];
   progress: MotionValue;
   range: number[];
   targetScale: number;
@@ -72,7 +72,7 @@ const CardParallax = ({
               className="absolute inset-0 blur-[150px] bg-opacity-50 rounded-full"
               style={{ backgroundColor: `rgb(${color})` }}
             ></div>
-            <Image
+            <NextImage
               src={images[0]}
               alt={slug}
               className="relative z-10 object-cover rounded-lg"

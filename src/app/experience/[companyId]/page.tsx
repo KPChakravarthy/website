@@ -45,4 +45,17 @@ const ExperiencePage = ({ params }: { params: { companyId: string } }) => {
 	);
 };
 
+export async function generateStaticParams() {
+  const companies = [
+    { companyId: 'ubyon' },
+    { companyId: 'cognitive-clouds' },
+    { companyId: 'imax' },
+  ];
+
+  return companies.map((company) => ({
+    companyId: company.companyId,
+  }));
+}
+
+
 export default ExperiencePage;

@@ -1,7 +1,7 @@
 "use client";
+import NextImage from "@/components/ui/NextImage";
 import CTAButton from "@/components/ui/button";
 import { useInView } from "framer-motion";
-import Image from "next/image";
 import React, { useRef } from "react";
 
 interface Article {
@@ -26,9 +26,11 @@ const BlogCard = ({ article, isLast }: { article: Article; isLast: boolean }) =>
 						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 					}}
 				>
-					<Image
+					<NextImage
 						src={article.image_url}
 						alt="Blog Banner"
+            width={0}
+            height={150}
 						className="w-full h-[150px] object-cover rounded-lg"
 					/>
 				</div>
