@@ -69,7 +69,7 @@ const Blog = (props: { articles: Article[] }) => {
       <h1 className="text-4xl font-bold text-neutral-500 mb-6 px-2">Articles</h1>
 			<div className="flex flex-col">
 				{props.articles.map((article, index) => (
-					<BlogCard article={article} isLast={index === props.articles.length - 1} />
+					<BlogCard key={article.id} article={article} isLast={index === props.articles.length - 1} />
 				))}
 			</div>
 		</div>

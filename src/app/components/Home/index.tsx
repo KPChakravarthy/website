@@ -13,37 +13,10 @@ const HomePage = () => {
 		window.open("mailto:kp@thecodeaddict.com");
 	};
 
-	const containerRef = React.useRef<HTMLDivElement>(null);
-	const [isMouseEntered, setIsMouseEntered] = React.useState(false);
-
-	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-		if (!containerRef.current) return;
-		const { left, top, width, height } =
-			containerRef.current.getBoundingClientRect();
-		const x = (e.clientX - left - width / 2) / 25;
-		const y = (e.clientY - top - height / 2) / 25;
-		containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-	};
-
-	const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-		setIsMouseEntered(true);
-		if (!containerRef.current) return;
-	};
-
-	const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-		if (!containerRef.current) return;
-		setIsMouseEntered(false);
-		containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
-	};
-
 	return (
 		<div className="home-section text-center">
       <BackgroundBeams />
 			<div
-				ref={containerRef}
-				onMouseEnter={handleMouseEnter}
-				onMouseMove={handleMouseMove}
-				onMouseLeave={handleMouseLeave}
 				className={cn("relative transition-all duration-200 ease-linear")}
 				style={{
 					transformStyle: "preserve-3d",

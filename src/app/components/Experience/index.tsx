@@ -1,5 +1,4 @@
 'use client'
-import { Timeline } from "@/components/ui/timeline";
 import React from "react";
 import img1 from "@/app/assets/experiences/img1.jpg";
 import img2 from "@/app/assets/experiences/img2.jpg";

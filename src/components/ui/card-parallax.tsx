@@ -35,10 +35,6 @@ const CardParallax = ({
   link,
 }: CardProps) => {
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
 
   const scale = useTransform(progress, range, [1, targetScale]);
 

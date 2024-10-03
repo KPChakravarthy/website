@@ -179,9 +179,9 @@ const UbyonCaseStudy = () => {
 						</li>
 					</ul>
 					<p>
-						This project required in-depth knowledge of the platform’s
+						This project required in-depth knowledge of the platform&apos;s
 						architecture and demanded close collaboration across frontend and
-						backend teams. CARMS not only enhanced the platform’s capabilities
+						backend teams. CARMS not only enhanced the platform&apos;s capabilities
 						but also contributed to reducing time-to-market for new
 						applications.
 					</p>
@@ -193,7 +193,7 @@ const UbyonCaseStudy = () => {
 						<li>
 							<strong>Improved User Experience:</strong> The user-friendly
 							interfaces and seamless service provider integrations I developed
-							in the frontend significantly enhanced the portal’s usability.
+							in the frontend significantly enhanced the portal&apos;s usability.
 						</li>
 						<li>
 							<strong>Secure Backend Operations:</strong> By implementing robust
@@ -208,9 +208,9 @@ const UbyonCaseStudy = () => {
 						</li>
 					</ul>
 					<p>
-						This project required in-depth knowledge of the platform’s
+						This project required in-depth knowledge of the platform&apos;s
 						architecture and demanded close collaboration across frontend and
-						backend teams. CARMS not only enhanced the platform’s capabilities
+						backend teams. CARMS not only enhanced the platform&apos;s capabilities
 						but also contributed to reducing time-to-market for new
 						applications.
 					</p>
@@ -225,8 +225,8 @@ const UbyonCaseStudy = () => {
 						on the responsibility of building secure, scalable backend services.
 						My work on the CARMS module and configuration management server laid
 						the foundation for future innovations, driving significant
-						improvements in the platform’s usability, security, and efficiency.
-						Through these efforts, I contributed to the company’s mission of
+						improvements in the platform&apos;s usability, security, and efficiency.
+						Through these efforts, I contributed to the company&apos;s mission of
 						delivering cutting-edge cloud-native solutions to its clients.
 					</p>
 				</motion.div>

@@ -81,7 +81,7 @@ const CognitiveCloudsCaseStudy = () => {
 					<p>
 						Part Analytics is an electronics business platform that enables
 						clients to save significantly on their Bill of Materials (BOM). The
-						platform cross-references a client’s BOM with a comprehensive list
+						platform cross-references a client&apos;s BOM with a comprehensive list
 						of manufacturers using the OctoPart tool to provide cost-effective
 						alternatives.
 					</p>
@@ -146,7 +146,7 @@ const CognitiveCloudsCaseStudy = () => {
 						<li>
 							<strong>Seamless Frontend Development:</strong> I played a key
 							role in developing the frontend of the platform, ensuring that the
-							user experience was intuitive and smooth, despite the app's
+							user experience was intuitive and smooth, despite the app&apos;s
 							complexity.
 						</li>
 					</ul>
@@ -158,7 +158,7 @@ const CognitiveCloudsCaseStudy = () => {
 							user engagement.
 						</li>
 						<li>
-							Real-time notifications enhanced the app’s responsiveness, making
+							Real-time notifications enhanced the app&apos;s responsiveness, making
 							it easy for users to stay informed about their travel plans.
 						</li>
 					</ul>
