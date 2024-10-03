@@ -2,26 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+	:root {
+		/* Background and Foreground */
+		--background: 0, 0%, 100%; /* Pure White Background */
+		--foreground: 224, 71.4%, 4.1%; /* Very Dark Blue-Gray (Text Color) */
+
+		/* Card and Popover */
+		--card: 0, 0%, 100%; /* Pure White for Cards */
+		--card-foreground: 224, 71.4%, 4.1%; /* Dark Text on Cards */
+		--popover: 0, 0%, 100%; /* Same as Card (White) */
+		--popover-foreground: 224, 71.4%, 4.1%; /* Dark Text on Popovers */
+
+		/* Primary (Crimson Red) */
+		--primary: 348, 83%, 47%; /* Crimson Red (HSL for #DC143C) */
+		--primary-foreground: 0, 0%, 98%; /* Almost White Text on Primary */
+
+		/* Secondary Color */
+		--secondary: 220, 14.3%, 95.9%; /* Very Light Grayish Blue */
+		--secondary-foreground: 224, 71.4%, 4.1%; /* Dark Foreground for Secondary Elements */
+
+		/* Muted (Subtle Elements) */
+		--muted: 220, 14.3%, 95.9%; /* Very Light Grayish Blue */
+		--muted-foreground: 220, 8.9%, 46.1%; /* Medium Gray for Muted Foreground */
+
+		/* Accent */
+		--accent: 173, 58%, 39%; /* Vibrant Teal for Highlights */
+		--accent-foreground: 0, 0%, 98%; /* White Text on Accent */
+
+		/* Destructive */
+		--destructive: 0, 84.2%, 60.2%; /* Strong Red for Destructive Elements */
+		--destructive-foreground: 210, 20%, 98%; /* Almost White Text on Destructive */
+
+		/* Border and Input */
+		--border: 220, 13%, 91%; /* Light Gray-Blue for Borders */
+		--input: 220, 13%, 91%; /* Same as Border for Inputs */
+
+		/* Ring (Focus States) */
+		--ring: 224, 71.4%, 4.1%; /* Very Dark Blue-Gray for Focus States */
+
+		/* Radius */
+		--radius: 0.5rem; /* Rounded Corners for UI Elements */
+
+		/* Chart Colors */
+		--chart-1: 12, 76%, 61%; /* Warm Orange */
+		--chart-2: 173, 58%, 39%; /* Vibrant Teal */
+		--chart-3: 197, 37%, 24%; /* Muted Dark Cyan */
+		--chart-4: 43, 74%, 66%; /* Light Green */
+		--chart-5: 27, 87%, 67%; /* Bright Yellow-Green */
+	}
+
+	.dark {
+		/* Background and Foreground */
+		--background: 210, 29%, 10%; /* Deep Dark Blue-Gray */
+		--foreground: 0, 0%, 98%; /* Almost White (Text Color) */
+
+		/* Card and Popover Backgrounds */
+		--card: 210, 29%, 8%; /* Darker Slate Blue for Cards */
+		--card-foreground: 210, 20%, 98%; /* Almost White */
+		--popover: 224, 71.4%, 15%; /* Same as Card Background */
+		--popover-foreground: 210, 20%, 98%; /* Almost White */
+
+		/* Primary (Crimson Red) */
+		--primary: 348, 83%, 47%; /* Crimson Red (HSL for #DC143C) */
+		--primary-foreground: 0, 0%, 98%; /* Almost White for Text on Primary */
+
+		/* Secondary Color (Support for UI Elements) */
+		--secondary: 215, 27.9%, 16.9%; /* Dark Desaturated Blue */
+		--secondary-foreground: 210, 20%, 98%; /* Almost White */
+
+		/* Muted (Subtle Elements) */
+		--muted: 0, 79%, 72%; /* Soft Pastel Pink */
+		--muted-foreground: 217.9, 10.6%, 64.9%; /* Light Gray for Text on Muted */
+
+		/* Accent Color (Highlights) */
+		--accent: 180, 100%, 25%; /* Bright Teal for Highlights */
+		--accent-foreground: 210, 20%, 98%; /* Almost White */
+
+		/* Destructive (Alerts or Warnings) */
+		--destructive: 0, 62.8%, 30.6%; /* Deep Red for Destructive Elements */
+		--destructive-foreground: 210, 20%, 98%; /* Almost White */
+
+		/* Border and Input (Elements like Forms) */
+		--border: 215, 27.9%, 16.9%; /* Dark Desaturated Blue (Matches Secondary) */
+		--input: 215, 27.9%, 16.9%; /* Same as Border for Input Fields */
+
+		/* Ring (Focus States) */
+		--ring: 216, 12.2%, 83.9%; /* Light Grayish Blue for Focus States */
+
+		/* Chart Colors (Visualizations) */
+		--chart-1: 220, 70%, 50%; /* Bright Blue */
+		--chart-2: 160, 60%, 45%; /* Medium Green */
+		--chart-3: 30, 80%, 55%; /* Warm Yellow-Orange */
+		--chart-4: 280, 65%, 60%; /* Vibrant Purple */
+		--chart-5: 340, 75%, 55%; /* Pinkish Red */
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(50px);
+	z-index: -9;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.perspective-transform {
+	transform: perspective(1200px);
 }
