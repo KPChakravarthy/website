@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import Link from 'next/link';
-import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
+import { useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import CTAButton from "./button";
 

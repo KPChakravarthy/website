@@ -43,7 +43,7 @@ const HomePage = () => {
 				}}
 			>
 				Hey! <br />
-				I'm Krishna Prasad
+				I&apos;m Krishna Prasad
 			</p>
 			<div className="text-neutral-400 mx-auto my-2 text-m text-center relative flex flex-col gap-5">
         <HeroHighlight>
@@ -55,7 +55,7 @@ const HomePage = () => {
 			</div>
 			<div className="buttons flex justify-center mt-10">
 				<HoverBorderGradient onClick={openMailTo}>
-					Let's talk!
+					Let&apos;s talk!
 				</HoverBorderGradient>
 			</div>
 			<InfiniteMovingCards

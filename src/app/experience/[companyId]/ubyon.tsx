@@ -83,7 +83,7 @@ const UbyonCaseStudy = () => {
 					<h2 className="text-xl font-semibold">Frontend development</h2>
 					<p>
 						As part of the administration portal team, I worked primarily with
-						React JS, leading key aspects of the portal's functionality to allow
+						React JS, leading key aspects of the portal&apos;s functionality to allow
 						customers to manage their resources seamlessly. My responsibilities
 						included:
 					</p>
@@ -107,7 +107,7 @@ const UbyonCaseStudy = () => {
 							<strong>Service Provider Integration:</strong> Integrated with
 							major cloud providers like AWS, Azure, GCP, and data platforms
 							such as Snowflake and Databricks, allowing seamless interaction
-							between the frontend portal and the customer's chosen cloud
+							between the frontend portal and the customer&apos;s chosen cloud
 							services.
 						</li>
 					</ul>
@@ -130,8 +130,8 @@ const UbyonCaseStudy = () => {
 					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
 						<li>
 							<strong>Secure Storage of Client Credentials:</strong> I developed
-							a system to securely store customers' sensitive information, such
-							as AWS client ID and secret, using Golang's encryption package.
+							a system to securely store customers&apos; sensitive information, such
+							as AWS client ID and secret, using Golang&apos;s encryption package.
 							This ensured that all sensitive data was handled with the highest
 							security standards.
 						</li>

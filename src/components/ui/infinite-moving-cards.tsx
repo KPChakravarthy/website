@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const ReactLogo = "https://www.svgrepo.com/show/374032/reactjs.svg";
@@ -29,7 +30,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-  }, []);
+  }, [addAnimation]);
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -99,7 +100,7 @@ export const InfiniteMovingCards = ({
             key={item}
           >
             <blockquote>
-              <img
+              <Image
                 key={idx}
                 src={item}
                 alt={`Logo ${idx}`}
