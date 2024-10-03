@@ -1,7 +1,6 @@
 "use client";
 
 import { basepath, cn } from "@/lib/utils";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import NextImage from "./NextImage";
 
@@ -48,6 +47,7 @@ export const InfiniteMovingCards = ({
     }
 
     addAnimation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [start, setStart] = useState(false);
   
