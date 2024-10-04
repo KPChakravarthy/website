@@ -6,6 +6,7 @@ import { basepath, cn } from "@/lib/utils";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import NextImage from "@/components/ui/NextImage";
+import MainTitle from "@/components/ui/flash-header";
 
 const HomePage = () => {
 	const openMailTo = () => {
@@ -34,16 +35,10 @@ const HomePage = () => {
           Full Stack Developer
         </p>
 			</div>
-			<p
-				className="text-2xl md:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-0 md:py-8"
-				style={{
-					backgroundImage:
-						"radial-gradient(61% 200% at 39.7% 21.9%, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.35) 110%)",
-				}}
-			>
-				Hey! <br />
-				I&apos;m Krishna Prasad
-			</p>
+      <MainTitle>
+        Hey! <br />
+        I&apos;m Krishna Prasad
+      </MainTitle>
 			<div className="text-neutral-400 mx-auto my-2 text-m text-center relative flex flex-col gap-5">
         <HeroHighlight>
           As a <Highlight>seasoned full-stack developer</Highlight>, I bring a passion for building efficient, user-centered applications that solve real-world challenges. My experience spans cloud-native microservices, responsive front-end interfaces, and scalable backend systems using technologies like <Highlight>React, Golang, AWS, and SQL</Highlight>. I focus on performance and seamless user experience, delivering results that make an impact across various industries, from secure authentication systems to e-commerce optimization.
