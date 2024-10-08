@@ -5,97 +5,100 @@
 @layer base {
 	:root {
 		/* Background and Foreground */
-		--background: 0, 0%, 100%; /* Pure White Background */
-		--foreground: 224, 71.4%, 4.1%; /* Very Dark Blue-Gray (Text Color) */
+		--background: 1, 8, 30;
+		--foreground: 223, 225, 230;
 
 		/* Card and Popover */
-		--card: 0, 0%, 100%; /* Pure White for Cards */
-		--card-foreground: 224, 71.4%, 4.1%; /* Dark Text on Cards */
-		--popover: 0, 0%, 100%; /* Same as Card (White) */
-		--popover-foreground: 224, 71.4%, 4.1%; /* Dark Text on Popovers */
+		--card: 21, 28, 49;
+		--card-foreground: 223, 225, 230;
+		--popover: 21, 28, 49;
+		--popover-foreground: 223, 225, 230;
 
 		/* Primary (Crimson Red) */
-		--primary: 348, 83%, 47%; /* Crimson Red (HSL for #DC143C) */
-		--primary-foreground: 0, 0%, 98%; /* Almost White Text on Primary */
+		--primary: 255, 57, 91;
+		--primary-foreground: 223, 225, 230;
 
 		/* Secondary Color */
-		--secondary: 220, 14.3%, 95.9%; /* Very Light Grayish Blue */
-		--secondary-foreground: 224, 71.4%, 4.1%; /* Dark Foreground for Secondary Elements */
+		--secondary: 21, 28, 49;
+		--secondary-foreground: 223, 225, 230;
 
 		/* Muted (Subtle Elements) */
-		--muted: 220, 14.3%, 95.9%; /* Very Light Grayish Blue */
-		--muted-foreground: 220, 8.9%, 46.1%; /* Medium Gray for Muted Foreground */
+		--muted: 255, 195, 216;
+		--muted-foreground: 223, 225, 230;
 
 		/* Accent */
-		--accent: 173, 58%, 39%; /* Vibrant Teal for Highlights */
-		--accent-foreground: 0, 0%, 98%; /* White Text on Accent */
+		--accent: 255, 195, 216;
+		--accent-foreground: 223, 225, 230;
 
 		/* Destructive */
-		--destructive: 0, 84.2%, 60.2%; /* Strong Red for Destructive Elements */
-		--destructive-foreground: 210, 20%, 98%; /* Almost White Text on Destructive */
+		--destructive: 255, 57, 91;
+		--destructive-foreground: 223, 225, 230;
 
 		/* Border and Input */
-		--border: 220, 13%, 91%; /* Light Gray-Blue for Borders */
-		--input: 220, 13%, 91%; /* Same as Border for Inputs */
+		--border: 21, 28, 49;
+		--input: 21, 28, 49;
 
 		/* Ring (Focus States) */
-		--ring: 224, 71.4%, 4.1%; /* Very Dark Blue-Gray for Focus States */
+		--ring: 1, 8, 30;
 
 		/* Radius */
-		--radius: 0.5rem; /* Rounded Corners for UI Elements */
+		--radius: 1.5rem;
 
 		/* Chart Colors */
-		--chart-1: 12, 76%, 61%; /* Warm Orange */
-		--chart-2: 173, 58%, 39%; /* Vibrant Teal */
-		--chart-3: 197, 37%, 24%; /* Muted Dark Cyan */
-		--chart-4: 43, 74%, 66%; /* Light Green */
-		--chart-5: 27, 87%, 67%; /* Bright Yellow-Green */
+		--chart-1: 45, 20, 44;
+		--chart-2: 128, 19, 54;
+		--chart-3: 81, 10, 50;
+		--chart-4: 199, 44, 65;
+		--chart-5: 238, 69, 64;
 	}
 
 	.dark {
 		/* Background and Foreground */
-		--background: 210, 29%, 10%; /* Deep Dark Blue-Gray */
-		--foreground: 0, 0%, 98%; /* Almost White (Text Color) */
+		--background: 1, 8, 30;
+		--foreground: 223, 225, 230;
 
-		/* Card and Popover Backgrounds */
-		--card: 210, 29%, 8%; /* Darker Slate Blue for Cards */
-		--card-foreground: 210, 20%, 98%; /* Almost White */
-		--popover: 224, 71.4%, 15%; /* Same as Card Background */
-		--popover-foreground: 210, 20%, 98%; /* Almost White */
+		/* Card and Popover */
+		--card: 21, 28, 49;
+		--card-foreground: 223, 225, 230;
+		--popover: 21, 28, 49;
+		--popover-foreground: 223, 225, 230;
 
 		/* Primary (Crimson Red) */
-		--primary: 348, 83%, 47%; /* Crimson Red (HSL for #DC143C) */
-		--primary-foreground: 0, 0%, 98%; /* Almost White for Text on Primary */
+		--primary: 255, 57, 91;
+		--primary-foreground: 223, 225, 230;
 
-		/* Secondary Color (Support for UI Elements) */
-		--secondary: 215, 27.9%, 16.9%; /* Dark Desaturated Blue */
-		--secondary-foreground: 210, 20%, 98%; /* Almost White */
+		/* Secondary Color */
+		--secondary: 21, 28, 49;
+		--secondary-foreground: 223, 225, 230;
 
 		/* Muted (Subtle Elements) */
-		--muted: 0, 79%, 72%; /* Soft Pastel Pink */
-		--muted-foreground: 217.9, 10.6%, 64.9%; /* Light Gray for Text on Muted */
+		--muted: 255, 195, 216;
+		--muted-foreground: 223, 225, 230;
 
-		/* Accent Color (Highlights) */
-		--accent: 180, 100%, 25%; /* Bright Teal for Highlights */
-		--accent-foreground: 210, 20%, 98%; /* Almost White */
+		/* Accent */
+		--accent: 255, 195, 216;
+		--accent-foreground: 223, 225, 230;
 
-		/* Destructive (Alerts or Warnings) */
-		--destructive: 0, 62.8%, 30.6%; /* Deep Red for Destructive Elements */
-		--destructive-foreground: 210, 20%, 98%; /* Almost White */
+		/* Destructive */
+		--destructive: 255, 57, 91;
+		--destructive-foreground: 223, 225, 230;
 
-		/* Border and Input (Elements like Forms) */
-		--border: 215, 27.9%, 16.9%; /* Dark Desaturated Blue (Matches Secondary) */
-		--input: 215, 27.9%, 16.9%; /* Same as Border for Input Fields */
+		/* Border and Input */
+		--border: 21, 28, 49;
+		--input: 21, 28, 49;
 
 		/* Ring (Focus States) */
-		--ring: 216, 12.2%, 83.9%; /* Light Grayish Blue for Focus States */
+		--ring: 1, 8, 30;
 
-		/* Chart Colors (Visualizations) */
-		--chart-1: 220, 70%, 50%; /* Bright Blue */
-		--chart-2: 160, 60%, 45%; /* Medium Green */
-		--chart-3: 30, 80%, 55%; /* Warm Yellow-Orange */
-		--chart-4: 280, 65%, 60%; /* Vibrant Purple */
-		--chart-5: 340, 75%, 55%; /* Pinkish Red */
+		/* Radius */
+		--radius: 0.5rem;
+
+		/* Chart Colors */
+		--chart-1: 45, 20, 44;
+		--chart-2: 128, 19, 54;
+		--chart-3: 81, 10, 50;
+		--chart-4: 199, 44, 65;
+		--chart-5: 238, 69, 64;
 	}
 }
 

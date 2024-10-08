@@ -1,11 +1,14 @@
 "use client";
-import { experienceColors } from "@/app/components/Experience";
+import MainTitle from "@/components/ui/flash-header";
 import { motion } from "framer-motion";
+import { sectionHeaderClassList } from "./page";
+import ImageList from "./caseImages";
+import { experienceColors } from "@/app/data";
 
 const UbyonCaseStudy = () => {
 	return (
 		<motion.div
-			className="container py-12 lg:px-0"
+			className="container py-12 px-4"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}
@@ -16,8 +19,8 @@ const UbyonCaseStudy = () => {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ delay: 0.2, duration: 0.7 }}
 			>
-				<h1 className="text-4xl font-bold mb-4">Ubyon Inc.</h1>
-				<p className="text-lg text-gray-600 dark:text-gray-300">
+        <MainTitle>Ubyon Inc.</MainTitle>
+				<p className="text-lg">
 					Full Stack Developer | Aug 2022 - Present
 				</p>
 			</motion.div>
@@ -28,8 +31,8 @@ const UbyonCaseStudy = () => {
 				animate={{ opacity: 1 }}
 				transition={{ delay: 0.4 }}
 			>
-				<div className="text-lg text-gray-800 dark:text-gray-200">
-					<h2 className="text-2xl font-semibold">Overview</h2>
+				<div className="text-lg">
+          <h2 className={sectionHeaderClassList}>Overview</h2>
 					<p>
 						At Ubyon Inc., I started as a frontend developer working with
 						React.js to enhance the administration portal. I later transitioned
@@ -45,7 +48,7 @@ const UbyonCaseStudy = () => {
 				</div>
 
 				<motion.div
-					className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-2xl border mb-8"
+					className="bg-card p-6 rounded-lg shadow-2xl border mb-8"
 					initial={{ scale: 0.9 }}
 					animate={{ scale: 1 }}
 					transition={{ duration: 0.6, delay: 0.6 }}
@@ -54,8 +57,8 @@ const UbyonCaseStudy = () => {
             border: `1px solid rgba(${experienceColors.ubyon}, 0.4)`
           }}
 				>
-					<h2 className="text-xl font-semibold">Key Contributions</h2>
-					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
+					<h2 className={`${sectionHeaderClassList} mt-0`}>Key Contributions</h2>
+					<ul className="list-disc list-outside space-y-3">
 						<li>
 							Developed cloud-native microservices for configuration management
 							and contributed to secure identity and access solutions.
@@ -79,15 +82,20 @@ const UbyonCaseStudy = () => {
 					</ul>
 				</motion.div>
 
+        <ImageList
+          color={experienceColors.ubyon}
+          images={["/assets/ubyon/ap_rules.png", "/assets/ubyon/app_config.png", "/assets/ubyon/asset_discovery.png"]}
+        />
+
 				<motion.div>
-					<h2 className="text-xl font-semibold">Frontend development</h2>
+					<h2 className={sectionHeaderClassList}>Frontend development</h2>
 					<p>
 						As part of the administration portal team, I worked primarily with
 						React JS, leading key aspects of the portal&apos;s functionality to allow
 						customers to manage their resources seamlessly. My responsibilities
 						included:
 					</p>
-					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
+					<ul className="list-disc list-outside space-y-3">
 						<li>
 							<strong>Application Configuration:</strong> Spearheaded the
 							creation of intuitive and user-friendly interfaces to configure
@@ -119,7 +127,7 @@ const UbyonCaseStudy = () => {
 				</motion.div>
 
 				<motion.div>
-					<h2 className="text-xl font-semibold">Backend development</h2>
+					<h2 className={sectionHeaderClassList}>Backend development</h2>
 					<p>
 						Transitioning into backend development, I was responsible for the
 						configuration management server, a critical component acting as a
@@ -127,7 +135,7 @@ const UbyonCaseStudy = () => {
 						used Golang extensively for secure data handling and service
 						orchestration. Key contributions include:
 					</p>
-					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
+					<ul className="list-disc list-outside space-y-3">
 						<li>
 							<strong>Secure Storage of Client Credentials:</strong> I developed
 							a system to securely store customers&apos; sensitive information, such
@@ -152,7 +160,7 @@ const UbyonCaseStudy = () => {
 				</motion.div>
 
 				<motion.div className="mt-8">
-					<h2 className="text-xl font-semibold">CARMS module development</h2>
+					<h2 className={sectionHeaderClassList}>CARMS module development</h2>
 					<p>
 						One of the most significant contributions I made was the development
 						of a new module, CARMS (Cloud Asset Resource Management System).
@@ -161,7 +169,7 @@ const UbyonCaseStudy = () => {
 						game-changer for the platform, enabling rapid app creation with
 						minimal user intervention. The key aspects of the module included:
 					</p>
-					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
+					<ul className="list-disc list-outside space-y-3">
 						<li>
 							<strong>Automated App Creation:</strong> CARMS streamlined the
 							process of transforming asset data into fully functional
@@ -188,8 +196,8 @@ const UbyonCaseStudy = () => {
 				</motion.div>
 
 				<motion.div>
-					<h2 className="text-xl font-semibold">Results and Impact</h2>
-					<ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-3">
+					<h2 className={sectionHeaderClassList}>Results and Impact</h2>
+					<ul className="list-disc list-outside space-y-3">
 						<li>
 							<strong>Improved User Experience:</strong> The user-friendly
 							interfaces and seamless service provider integrations I developed
@@ -217,7 +225,7 @@ const UbyonCaseStudy = () => {
 				</motion.div>
 
 				<motion.div>
-					<h2 className="text-xl font-semibold">Conclusion</h2>
+					<h2 className={sectionHeaderClassList}>Conclusion</h2>
 					<p>
 						My journey at Ubyon Inc. was a transformative experience, allowing
 						me to grow from a frontend specialist into a Full Stack Developer. I

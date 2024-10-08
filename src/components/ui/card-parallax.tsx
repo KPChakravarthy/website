@@ -4,6 +4,7 @@ import { useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import CTAButton from "./button";
 import NextImage from "./NextImage";
+import AutoSlider from '@/app/components/AutoSlider';
 
 interface CardProps {
   i: number;
@@ -72,6 +73,7 @@ const CardParallax = ({
               className="absolute inset-0 blur-[150px] bg-opacity-50 rounded-full"
               style={{ backgroundColor: `rgb(${color})` }}
             ></div>
+            {/* <AutoSlider images={images} /> */}
             <NextImage
               src={images[0]}
               alt={slug}

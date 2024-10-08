@@ -9,6 +9,9 @@ const companyCaseStudies: Record<string, JSX.Element> = {
   'cognitive-clouds': <CognitiveCloudsCaseStudy />,
 };
 
+export const sectionHeaderClassList = "text-2xl font-bold text-neutral-500 my-6";
+export const sectionSubHeaderClassList = "text-lg font-bold text-neutral-500 mt-4";
+
 const ExperiencePage = ({ params }: { params: { companyId: string } }) => {
 	const companyId = params.companyId;
 
@@ -19,7 +22,7 @@ const ExperiencePage = ({ params }: { params: { companyId: string } }) => {
 	}
 
 	return (
-		<div className="min-h-screen py-12 experience-section container mx-auto px-4 lg:px-0">
+		<div className="min-h-screen py-12 experience-section container mx-auto px-10">
 			<Link
 				href="/#experiences"
 				className="flex items-center text-sm text-gray-300 hover:text-primary transition duration-300 ease-in-out"

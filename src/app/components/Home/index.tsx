@@ -7,8 +7,13 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import NextImage from "@/components/ui/NextImage";
 import MainTitle from "@/components/ui/flash-header";
+import { HomePageData } from "@/lib/types/home";
 
-const HomePage = () => {
+interface Props {
+  pageData: HomePageData;
+}
+
+const HomePage = (props: Props) => {
 	const openMailTo = () => {
 		window.open("mailto:kp@thecodeaddict.com");
 	};
@@ -24,7 +29,7 @@ const HomePage = () => {
 			>
 				<div className="rounded-full w-[10rem] h-[10rem] mx-auto shadow-lg transition-transform duration-500 hover:scale-105 hover:rotate-3 hover:shadow-2xl rounded-full overflow-hidden">
 					<NextImage
-						src={basepath + "/assets/me.jpeg"}
+						src={props.pageData.image}
             alt="Krishna Prasad - Full stack developer"
 						className="w-full h-full object-cover"
 					/>
@@ -32,24 +37,19 @@ const HomePage = () => {
         <p
           className="text-sm inline-block px-4 py-2 -mt-[2rem] rounded-3xl font-bold bg-card border border-gray-600 tracking-wide"
         >
-          Full Stack Developer
+          {props.pageData.designation}
         </p>
 			</div>
       <MainTitle>
         Hey! <br />
-        I&apos;m Krishna Prasad
+        {props.pageData.intro}
       </MainTitle>
 			<div className="text-neutral-400 mx-auto my-2 text-m text-center relative flex flex-col gap-5">
-        <HeroHighlight>
-          As a <Highlight>seasoned full-stack developer</Highlight>, I bring a passion for building efficient, user-centered applications that solve real-world challenges. My experience spans cloud-native microservices, responsive front-end interfaces, and scalable backend systems using technologies like <Highlight>React, Golang, AWS, and SQL</Highlight>. I focus on performance and seamless user experience, delivering results that make an impact across various industries, from secure authentication systems to e-commerce optimization.
-        </HeroHighlight>
-				<p>
-					
-				</p>
+        {props.pageData.description}
 			</div>
 			<div className="buttons flex justify-center mt-10">
 				<HoverBorderGradient onClick={openMailTo}>
-					Let&apos;s talk!
+					{props.pageData.ctaText}
 				</HoverBorderGradient>
 			</div>
 			<InfiniteMovingCards
